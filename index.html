@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website for a Recording and Podcast Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка и навигация -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10v3M6 6v12M10 3v18M14 8v8M18 5v14M22 10v3"/></svg>
+                <span>Waveroom</span>
+            </div>
+            <nav class="nav">
+                <a href="#equipment">Equipment</a>
+                <a href="#services">Services</a>
+                <a href="#prices">Prices</a>
+                <a href="#works">Our Works</a>
+            </nav>
+            <div class="header-right">
+                <a href="tel:+77011234567" class="phone">+7 (701) 123-45-67</a>
+                <button class="burger-menu" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главный экран -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Crystal Clear Sound for Your Music and Podcasts</h1>
+                <p>A space made for bold ideas, honest performances, and audio that stays with you.</p>
+                <a href="#booking" class="btn-cta">Book Studio Time</a>
+            </div>
+        </section>
+
+        <!-- Сетка услуг и цен -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services & Prices</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Vocal Recording</h3>
+                        <p class="price">15,000 ₸ / hour</p>
+                        <p>Professional multi-track vocal recording with top-tier condenser microphones and acoustic isolation.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Track Mixing</h3>
+                        <p class="price">25,000 ₸ / track</p>
+                        <p>Deep balancing, frequency correction, compression, spatial effects, and professional mastering.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Turnkey Podcast</h3>
+                        <p class="price">40,000 ₸ / session</p>
+                        <p>Full video and audio recording for up to 4 participants, multi-cam switching, and instant rough cut.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи (с type="email" и type="tel") -->
+        <section id="booking" class="booking">
+            <div class="container booking-container">
+                <h2>Book Studio Time</h2>
+                <form class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (...) ...-..-..">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Session Duration (hours)</label>
+                        <input type="number" id="duration" name="duration" min="1" max="10" value="2" required>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="engineer" name="engineer">
+                        <label for="engineer">Include Sound Engineer Assistance</label>
+                    </div>
+                    <button type="submit" class="btn-cta">Confirm Booking</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>Waveroom Studio</h4>
+                <p>&copy; 2026 All rights reserved. Custom dark neon theme.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Streaming Releases</h4>
+                <a href="#">Apple Music</a>
+                <a href="#">Spotify</a>
+                <a href="#">YouTube Music</a>
+            </div>
+            <div class="footer-col">
+                <h4>Social Networks</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Telegram</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
