@@ -3,125 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website for a Recording and Podcast Studio</title>
+    <title>ROOM / 04 — Recording & Podcast Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-theme">
 
-    <!-- Шапка и навигация -->
+    <!-- Header / Nav Component -->
     <header class="header">
-        <div class="container nav-container">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10v3M6 6v12M10 3v18M14 8v8M18 5v14M22 10v3"/></svg>
-                <span>Waveroom</span>
-            </div>
-            <nav class="nav">
-                <a href="#equipment">Equipment</a>
-                <a href="#services">Services</a>
-                <a href="#prices">Prices</a>
-                <a href="#works">Our Works</a>
-            </nav>
-            <div class="header-right">
-                <a href="tel:+77011234567" class="phone">+7 (701) 123-45-67</a>
-                <button class="burger-menu" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+        <div class="logo">
+            <span class="logo-icon">🔊</span> ROOM / 04
+        </div>
+        <nav class="nav">
+            <a href="#equipment">Equipment</a>
+            <a href="#services">Services</a>
+            <a href="#prices">Prices</a>
+            <a href="#works">Our Works</a>
+        </nav>
+        <div class="header-contact">
+            <a href="tel:+77011234567" class="phone-link">📞 +7 (701) 123-45-67</a>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Light/Dark Theme">☀️ / 🌙</button>
         </div>
     </header>
 
     <main>
-        <!-- Главный экран -->
+        <!-- Hero Section Component -->
         <section class="hero">
-            <div class="container hero-content">
+            <div class="hero-content">
+                <span class="badge">● NEW YORK - RECORDING & PODCAST STUDIO</span>
                 <h1>Crystal Clear Sound for Your Music and Podcasts</h1>
-                <p>A space made for bold ideas, honest performances, and audio that stays with you.</p>
-                <a href="#booking" class="btn-cta">Book Studio Time</a>
+                <p class="hero-desc">Your ideas. Our space. Exceptional sound. Record, mix, and create with people who listen.</p>
+                <div class="hero-actions">
+                    <a href="#booking" class="btn-primary">Book Studio Time ↗</a>
+                </div>
+                <p class="sub-info">● Sessions from $65 / hour • Open daily, 10 AM-10 PM</p>
             </div>
-        </section>
-
-        <!-- Сетка услуг и цен -->
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Our Services & Prices</h2>
-                <div class="services-grid">
-                    <article class="service-card">
-                        <h3>Vocal Recording</h3>
-                        <p class="price">15,000 ₸ / hour</p>
-                        <p>Professional multi-track vocal recording with top-tier condenser microphones and acoustic isolation.</p>
-                    </article>
-                    <article class="service-card">
-                        <h3>Track Mixing</h3>
-                        <p class="price">25,000 ₸ / track</p>
-                        <p>Deep balancing, frequency correction, compression, spatial effects, and professional mastering.</p>
-                    </article>
-                    <article class="service-card">
-                        <h3>Turnkey Podcast</h3>
-                        <p class="price">40,000 ₸ / session</p>
-                        <p>Full video and audio recording for up to 4 participants, multi-cam switching, and instant rough cut.</p>
-                    </article>
+            <div class="hero-media">
+                <div class="media-card">
+                    <span class="media-tag">FEATURED STUDIO ROOM</span>
+                    <p>Designed for multi-person live recording and podcasting.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Форма обратной связи (с type="email" и type="tel") -->
-        <section id="booking" class="booking">
-            <div class="container booking-container">
-                <h2>Book Studio Time</h2>
-                <form class="feedback-form">
+        <!-- Grid Section Component (Services) -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2>From first take to final cut.</h2>
+                <p>A professional team and studio environment designed to sharpen every acoustic detail.</p>
+            </div>
+            
+            <div class="grid-container">
+                <article class="service-card">
+                    <h3>Vocal Recording</h3>
+                    <p class="card-desc">Give your voice the room it deserves.</p>
+                    <div class="price">$65 <span class="unit">/ hour</span></div>
+                    <ul class="card-features">
+                        <li>2-hour minimum</li>
+                        <li>Treated booth • Premium mic chain</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <h3>Track Mixing</h3>
+                    <p class="card-desc">Balance, depth, and a sound that is yours.</p>
+                    <div class="price">$85 <span class="unit">/ hour</span></div>
+                    <ul class="card-features">
+                        <li>2-hour minimum • Engineer included</li>
+                        <li>Analog + digital • Stereo mix delivery</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <h3>Turnkey Podcast</h3>
+                    <p class="card-desc">Walk in with an idea. Leave ready to share.</p>
+                    <div class="price">$95 <span class="unit">/ hour</span></div>
+                    <ul class="card-features">
+                        <li>1-hour minimum • Engineer included</li>
+                        <li>Up to 4 guests • Recording + basic edit</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Signal Chain & Showcase Section -->
+        <section id="equipment" class="showcase-section">
+            <div class="showcase-info">
+                <span class="badge">● THE SIGNAL CHAIN</span>
+                <h2>Good sound starts here.</h2>
+                
+                <table class="specs-table">
+                    <tr>
+                        <td>MICROPHONE</td>
+                        <td><strong>Neumann U87 Ai</strong></td>
+                    </tr>
+                    <tr>
+                        <td>PREAMP</td>
+                        <td><strong>Universal Audio 610</strong></td>
+                    </tr>
+                    <tr>
+                        <td>MONITORING</td>
+                        <td><strong>Genelec 8341A + Apollo x8</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="showcase-card">
+                <span class="card-tag">LATEST SESSION / 2026</span>
+                <h3>After Hours</h3>
+                <p class="artist-name">Maya Ellis - Recorded & mixed here</p>
+                <button class="play-btn">▶ Listen to the session</button>
+            </div>
+        </section>
+
+        <!-- Feedback Form Component -->
+        <section id="booking" class="booking-section">
+            <div class="booking-title">
+                <span class="badge">● RESERVED TIME SLOT</span>
+                <h2>Make room for your sound.</h2>
+                <p>Book your session. Tell us a bit about your project. We'll confirm and help you get ready to record.</p>
+                <a href="mailto:hello@room04.studio" class="email-link">hello@room04.studio ↗</a>
+            </div>
+
+            <div class="booking-form-card">
+                <h3>Book your session</h3>
+                <form class="booking-form">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                        <label>Vocal Recording • $65 / hour</label>
+                        <select required>
+                            <option value="vocal">Vocal Recording ($65/hr)</option>
+                            <option value="mixing">Track Mixing ($85/hr)</option>
+                            <option value="podcast">Turnkey Podcast ($95/hr)</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="example@domain.com">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Session Duration</label>
+                            <select required>
+                                <option>2 Hours</option>
+                                <option>3 Hours</option>
+                                <option>4 Hours</option>
+                                <option>Full Day (8 Hours)</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+7 (...) ...-..-..">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" placeholder="+7 (701) 000-00-00" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="date" id="date" name="date" required>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="engineer" checked>
+                        <label for="engineer">Add Mix Engineer</label>
                     </div>
-                    <div class="form-group">
-                        <label for="duration">Session Duration (hours)</label>
-                        <input type="number" id="duration" name="duration" min="1" max="10" value="2" required>
+
+                    <div class="total-row">
+                        <span>ESTIMATED TOTAL:</span>
+                        <span class="total-price">$130</span>
                     </div>
-                    <div class="form-checkbox">
-                        <input type="checkbox" id="engineer" name="engineer">
-                        <label for="engineer">Include Sound Engineer Assistance</label>
-                    </div>
-                    <button type="submit" class="btn-cta">Confirm Booking</button>
+
+                    <button type="submit" class="btn-primary full-width">Request Session Time ↗</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <!-- Подвал -->
+    <!-- Footer Component -->
     <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-col">
-                <h4>Waveroom Studio</h4>
-                <p>&copy; 2026 All rights reserved. Custom dark neon theme.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Streaming Releases</h4>
-                <a href="#">Apple Music</a>
-                <a href="#">Spotify</a>
-                <a href="#">YouTube Music</a>
-            </div>
-            <div class="footer-col">
-                <h4>Social Networks</h4>
-                <a href="#">Instagram</a>
-                <a href="#">Telegram</a>
-                <a href="#">TikTok</a>
-            </div>
+        <div class="footer-col">
+            <div class="logo"><span class="logo-icon">🔊</span> ROOM / 04</div>
+            <p>High-end sound recording & podcasting studio.</p>
+            <p class="copyright">© 2026 ROOM / 04. All rights reserved.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Navigation</h4>
+            <a href="#equipment">Equipment</a>
+            <a href="#services">Services</a>
+            <a href="#prices">Prices</a>
+            <a href="#works">Our Works</a>
+        </div>
+        <div class="footer-col">
+            <h4>Socials</h4>
+            <a href="#">Instagram ↗</a>
+            <a href="#">Spotify ↗</a>
+            <a href="#">YouTube ↗</a>
         </div>
     </footer>
 
+    <script>
+        // Toggle Light/Dark Theme Script
+        const themeBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        themeBtn.addEventListener('click', () => {
+            if (body.classList.contains('dark-theme')) {
+                body.classList.replace('dark-theme', 'light-theme');
+            } else {
+                body.classList.replace('light-theme', 'dark-theme');
+            }
+        });
+    </script>
 </body>
 </html>
